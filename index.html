@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" type="image/png" href="favicon.ico"/>
+    <link rel="stylesheet" href="css/main.css">
+    <title>List App</title>
+</head>
+<body>
+    <div class="container">
+        <main>
+            <div class="list-box">
+                <ul id="user-list">
+                </ul>
+            </div>
+            <div class="input-box">
+                <form class="list-form" id="list-form" autocomplete="off">
+                    <div class="form-input">
+                        <input type="text" id="user-input">
+                        <label for="user-input">what next?</label>
+                    </div>
+                    <button type="submit" id="add-button">add</button>
+                </form>
+            </div>
+        </main>
+        <footer>
+            <span class="footer-text">Design & Creation<br>Mario Kool 2020</span>
+        </footer>
+    </div>
+
+    <template id="li-template">
+        <li class="">
+            <input type="checkbox" id="">
+            <label for="">
+                <svg class="checkbox-graphic" viewBox="0 0 20 20">
+                    <circle class="checkbox" cx="8" cy="8" r="7.5" transform="translate(2 2)"/>
+                    <path  class="checkmark" d="M397.6,277.576l4.4,4.512,6.492-10.894" transform="translate(-391.608 -269.08)"/>
+                </svg>
+                <span class="li-text"></span>
+            </label>
+            <button type="button" class="list-remove">remove</button>
+        </li>
+    </template>
+
+    <script>
+        // get total height of viewport on load
+        // this is to stop android keyboard from affecting height of viewport
+        const viewheight = window.innerHeight;
+        document.documentElement.style.setProperty('--viewheight', `${viewheight}px`);
+    </script>
+    <script src="js/main.js"></script>
+</body>
+</html>
